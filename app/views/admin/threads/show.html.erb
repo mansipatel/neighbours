@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Msg:</strong>
+  <%= @admin_thread.msg_id %>
+</p>
+
+<p>
+  <strong>Thread time:</strong>
+  <%= @admin_thread.thread_time %>
+</p>
+
+<p>
+  <strong>Thread by:</strong>
+  <%= @admin_thread.thread_by %>
+</p>
+
+<p>
+  <strong>Thread text:</strong>
+  <%= @admin_thread.thread_text %>
+</p>
+
+<%= link_to 'Edit', edit_admin_thread_path(@admin_thread) %> |
+<%= link_to 'Back', admin_threads_path %>

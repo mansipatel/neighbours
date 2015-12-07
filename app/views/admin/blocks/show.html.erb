@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Block address:</strong>
+  <%= @admin_block.block_address %>
+</p>
+
+<p>
+  <strong>Hood:</strong>
+  <%= @admin_block.hood_id %>
+</p>
+
+<%= link_to 'Edit', edit_admin_block_path(@admin_block) %> |
+<%= link_to 'Back', admin_blocks_path %>

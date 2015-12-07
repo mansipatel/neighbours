@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Requester:</strong>
+  <%= @admin_block_request.requester_id %>
+</p>
+
+<p>
+  <strong>Approver1:</strong>
+  <%= @admin_block_request.approver1_id %>
+</p>
+
+<p>
+  <strong>Approver2:</strong>
+  <%= @admin_block_request.approver2_id %>
+</p>
+
+<p>
+  <strong>Approver3:</strong>
+  <%= @admin_block_request.approver3_id %>
+</p>
+
+<%= link_to 'Edit', edit_admin_block_request_path(@admin_block_request) %> |
+<%= link_to 'Back', admin_block_requests_path %>

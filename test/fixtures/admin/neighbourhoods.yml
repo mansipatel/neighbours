@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hood_address: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  hood_description: MyText
+
+two:
+  hood_address: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  hood_description: MyText

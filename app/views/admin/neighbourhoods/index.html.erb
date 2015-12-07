@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Neighbourhoods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hood address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Hood description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_neighbourhoods.each do |admin_neighbourhood| %>
+      <tr>
+        <td><%= admin_neighbourhood.hood_address %></td>
+        <td><%= admin_neighbourhood.city %></td>
+        <td><%= admin_neighbourhood.state %></td>
+        <td><%= admin_neighbourhood.zip %></td>
+        <td><%= admin_neighbourhood.hood_description %></td>
+        <td><%= link_to 'Show', admin_neighbourhood %></td>
+        <td><%= link_to 'Edit', edit_admin_neighbourhood_path(admin_neighbourhood) %></td>
+        <td><%= link_to 'Destroy', admin_neighbourhood, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Neighbourhood', new_admin_neighbourhood_path %>

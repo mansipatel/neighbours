@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Msg:</strong>
+  <%= @admin_message_recipient.msg_id %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @admin_message_recipient.recipient_id %>
+</p>
+
+<p>
+  <strong>Recipient type:</strong>
+  <%= @admin_message_recipient.recipient_type %>
+</p>
+
+<%= link_to 'Edit', edit_admin_message_recipient_path(@admin_message_recipient) %> |
+<%= link_to 'Back', admin_message_recipients_path %>

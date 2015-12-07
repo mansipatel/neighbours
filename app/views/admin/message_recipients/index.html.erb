@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Message Recipients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Msg</th>
+      <th>Recipient</th>
+      <th>Recipient type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_message_recipients.each do |admin_message_recipient| %>
+      <tr>
+        <td><%= admin_message_recipient.msg_id %></td>
+        <td><%= admin_message_recipient.recipient_id %></td>
+        <td><%= admin_message_recipient.recipient_type %></td>
+        <td><%= link_to 'Show', admin_message_recipient %></td>
+        <td><%= link_to 'Edit', edit_admin_message_recipient_path(admin_message_recipient) %></td>
+        <td><%= link_to 'Destroy', admin_message_recipient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Message recipient', new_admin_message_recipient_path %>

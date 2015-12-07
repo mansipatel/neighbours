@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Messages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Msg text</th>
+      <th>Msg by</th>
+      <th>Msg time</th>
+      <th>Msg title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_messages.each do |admin_message| %>
+      <tr>
+        <td><%= admin_message.msg_text %></td>
+        <td><%= admin_message.msg_by %></td>
+        <td><%= admin_message.msg_time %></td>
+        <td><%= admin_message.msg_title %></td>
+        <td><%= link_to 'Show', admin_message %></td>
+        <td><%= link_to 'Edit', edit_admin_message_path(admin_message) %></td>
+        <td><%= link_to 'Destroy', admin_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Message', new_admin_message_path %>

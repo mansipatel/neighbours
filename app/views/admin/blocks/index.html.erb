@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Blocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Block address</th>
+      <th>Hood</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_blocks.each do |admin_block| %>
+      <tr>
+        <td><%= admin_block.block_address %></td>
+        <td><%= admin_block.hood_id %></td>
+        <td><%= link_to 'Show', admin_block %></td>
+        <td><%= link_to 'Edit', edit_admin_block_path(admin_block) %></td>
+        <td><%= link_to 'Destroy', admin_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Block', new_admin_block_path %>

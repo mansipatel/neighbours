@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  msg_id: 1
+  thread_time: 2015-12-07 00:42:54
+  thread_by: 1
+  thread_text: MyText
+
+two:
+  msg_id: 1
+  thread_time: 2015-12-07 00:42:54
+  thread_by: 1
+  thread_text: MyText

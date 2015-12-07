@@ -1,0 +1,33 @@
+<%= form_for(@admin_thread) do |f| %>
+  <% if @admin_thread.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_thread.errors.count, "error") %> prohibited this admin_thread from being saved:</h2>
+
+      <ul>
+      <% @admin_thread.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :msg_id %><br>
+    <%= f.number_field :msg_id %>
+  </div>
+  <div class="field">
+    <%= f.label :thread_time %><br>
+    <%= f.datetime_select :thread_time %>
+  </div>
+  <div class="field">
+    <%= f.label :thread_by %><br>
+    <%= f.number_field :thread_by %>
+  </div>
+  <div class="field">
+    <%= f.label :thread_text %><br>
+    <%= f.text_area :thread_text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

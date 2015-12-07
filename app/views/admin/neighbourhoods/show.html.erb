@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hood address:</strong>
+  <%= @admin_neighbourhood.hood_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @admin_neighbourhood.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @admin_neighbourhood.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @admin_neighbourhood.zip %>
+</p>
+
+<p>
+  <strong>Hood description:</strong>
+  <%= @admin_neighbourhood.hood_description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_neighbourhood_path(@admin_neighbourhood) %> |
+<%= link_to 'Back', admin_neighbourhoods_path %>

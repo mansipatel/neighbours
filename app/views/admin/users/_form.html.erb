@@ -1,0 +1,57 @@
+<%= form_for(@admin_user) do |f| %>
+  <% if @admin_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_user.errors.count, "error") %> prohibited this admin_user from being saved:</h2>
+
+      <ul>
+      <% @admin_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :creation_date %><br>
+    <%= f.datetime_select :creation_date %>
+  </div>
+  <div class="field">
+    <%= f.label :last_login_time %><br>
+    <%= f.datetime_select :last_login_time %>
+  </div>
+  <div class="field">
+    <%= f.label :hood_id %><br>
+    <%= f.number_field :hood_id %>
+  </div>
+  <div class="field">
+    <%= f.label :block_id %><br>
+    <%= f.number_field :block_id %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_num %><br>
+    <%= f.number_field :phone_num %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

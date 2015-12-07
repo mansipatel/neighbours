@@ -1,0 +1,33 @@
+<%= form_for(@admin_block_request) do |f| %>
+  <% if @admin_block_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_block_request.errors.count, "error") %> prohibited this admin_block_request from being saved:</h2>
+
+      <ul>
+      <% @admin_block_request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :requester_id %><br>
+    <%= f.number_field :requester_id %>
+  </div>
+  <div class="field">
+    <%= f.label :approver1_id %><br>
+    <%= f.number_field :approver1_id %>
+  </div>
+  <div class="field">
+    <%= f.label :approver2_id %><br>
+    <%= f.number_field :approver2_id %>
+  </div>
+  <div class="field">
+    <%= f.label :approver3_id %><br>
+    <%= f.number_field :approver3_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

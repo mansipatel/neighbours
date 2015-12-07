@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @admin_neighbour.user_id %>
+</p>
+
+<p>
+  <strong>Neihgbour:</strong>
+  <%= @admin_neighbour.neihgbour_id %>
+</p>
+
+<%= link_to 'Edit', edit_admin_neighbour_path(@admin_neighbour) %> |
+<%= link_to 'Back', admin_neighbours_path %>

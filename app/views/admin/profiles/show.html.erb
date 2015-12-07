@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @admin_profile.user_id %>
+</p>
+
+<p>
+  <strong>Profile desc:</strong>
+  <%= @admin_profile.profile_desc %>
+</p>
+
+<%= link_to 'Edit', edit_admin_profile_path(@admin_profile) %> |
+<%= link_to 'Back', admin_profiles_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Friends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sender</th>
+      <th>Receiver</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_friends.each do |admin_friend| %>
+      <tr>
+        <td><%= admin_friend.sender_id %></td>
+        <td><%= admin_friend.receiver_id %></td>
+        <td><%= admin_friend.status %></td>
+        <td><%= link_to 'Show', admin_friend %></td>
+        <td><%= link_to 'Edit', edit_admin_friend_path(admin_friend) %></td>
+        <td><%= link_to 'Destroy', admin_friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Friend', new_admin_friend_path %>

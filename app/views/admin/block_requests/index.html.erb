@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Block Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Requester</th>
+      <th>Approver1</th>
+      <th>Approver2</th>
+      <th>Approver3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_block_requests.each do |admin_block_request| %>
+      <tr>
+        <td><%= admin_block_request.requester_id %></td>
+        <td><%= admin_block_request.approver1_id %></td>
+        <td><%= admin_block_request.approver2_id %></td>
+        <td><%= admin_block_request.approver3_id %></td>
+        <td><%= link_to 'Show', admin_block_request %></td>
+        <td><%= link_to 'Edit', edit_admin_block_request_path(admin_block_request) %></td>
+        <td><%= link_to 'Destroy', admin_block_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Block request', new_admin_block_request_path %>

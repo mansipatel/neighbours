@@ -1,0 +1,29 @@
+<%= form_for(@admin_message_recipient) do |f| %>
+  <% if @admin_message_recipient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_message_recipient.errors.count, "error") %> prohibited this admin_message_recipient from being saved:</h2>
+
+      <ul>
+      <% @admin_message_recipient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :msg_id %><br>
+    <%= f.number_field :msg_id %>
+  </div>
+  <div class="field">
+    <%= f.label :recipient_id %><br>
+    <%= f.number_field :recipient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :recipient_type %><br>
+    <%= f.number_field :recipient_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

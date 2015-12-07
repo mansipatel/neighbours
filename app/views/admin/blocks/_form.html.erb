@@ -1,0 +1,25 @@
+<%= form_for(@admin_block) do |f| %>
+  <% if @admin_block.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_block.errors.count, "error") %> prohibited this admin_block from being saved:</h2>
+
+      <ul>
+      <% @admin_block.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :block_address %><br>
+    <%= f.text_field :block_address %>
+  </div>
+  <div class="field">
+    <%= f.label :hood_id %><br>
+    <%= f.number_field :hood_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
